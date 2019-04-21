@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Super Seer</title>
+	<style>
+		#overlay {
+			width:420;
+			height:6300;
+			opacity:.8;
+		}
+		#overlayclip {
+			position:absolute;
+			left:22;
+			top:1;			
+			width:420;
+			height:420;
+			overflow:hidden;			
+		}
+		#mapbox{
+			position:relative;
+		}
+	</style>
+	<script type='text/javascript'>
+		changeMap = function(){	
+			map.src="Level_"+mapSelect.value+".png"
+			overlay.src=monsterSelect.value+".png"
+			overlay.style.marginTop =(mapSelect.selectedIndex*-420+1)+"px"
+		}
+	</script>
+</head>
+<body onLoad="changeMap();">
+	Map:<select onchange="changeMap();" id='mapSelect'>
+	<option value="01">1</option>
+	<option value="02">2</option>
+	<option value="03">3</option>
+	<option value="04">4</option>
+	<option value="05">5</option>
+	<option value="06">6</option>
+	<option value="07">7</option>
+	<option value="08">8</option>
+	<option value="09">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	</select></br>
+	Monster:<select onchange="changeMap();" id='monsterSelect'>
+	<option value="01">Humanoid</option>
+	<option value="02">Cleanup</option>
+	<option value="03">Demon</option>
+	<option value="04">Devil</option>
+	<option value="05">Elemental</option>
+	<option value="06">Reptile</option>
+	<option value="07">Dragon</option>
+	<option value="08">Animal</option>
+	<option value="09">Insect</option>
+	<option value="10">Undead</option>
+	<option value="11">Water</option>
+	<option value="12">Giant</option>
+	<option value="13">Mythical</option>
+	<option value="14">Lycanthrope</option>
+	<option value="15">Thief</option>
+	<option value="16">Mage</option>
+	<option value="17">Warrior</option>
+	<option value="18">Indigini</option>
+	<option value="19">Lairs</option>
+	</select></br>
+	<div id='mapbox'>
+		<img id='map' src="Level_01.png"/>
+		<div id='overlayclip'>
+			<img id='overlay' src="01.png"/>
+		</div>	
+	</div>
+</body>
+</html>
