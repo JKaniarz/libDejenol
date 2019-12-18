@@ -10,7 +10,7 @@ and HallOfRecords
 It has functions for loading the types out of the data files.
 ### MSaver (.cpp/.h)
 It will eventually have functions for saving all the types back to the data 
-files. Right now it can only save the automap.
+files. Right now it can only save monsters and the automap.
 ### RecordReader.h
 Reads files in VB3's record style.
 ### RecordWriter.h
@@ -32,3 +32,15 @@ rocks for the sake of having them marked on the map.)
 
 If you provide a number as a command line parameter it will fully reveal that
 floor. (For people who like spoilers.)
+### monstersheet
+A program that converts the monster data to/from csv format.
+
+Usage:
+	monstersheet infile outfile
+
+Examples:
+	monstersheet mdata5.mdr mdata5.csv
+	monstersheet mdata5.csv mdata5.mdr
+
+If no outfile is provided it will use the filename of the input.
+If no parameters are provided it will convert mdata5.mdr to csv.
