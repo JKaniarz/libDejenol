@@ -167,7 +167,7 @@ struct Item {
 	int16_t spellIndex;
 	int16_t spellID;
 	int16_t charges;
-	int16_t u13;
+	int16_t deleted;
 	int32_t guilds;
 	int16_t levelScale;
 	float damageMod;
@@ -175,8 +175,8 @@ struct Item {
 	int16_t nHands;
 	int16_t type;
 	int32_t resistanceFlags;
-	int16_t stats[7];
-	int16_t statsmod[7];
+	int16_t statsRequired[7];
+	int16_t statsMod[7];
 	int16_t cursed;
 	int16_t spellLvl;
 	int16_t classRestricted;

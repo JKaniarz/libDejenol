@@ -55,7 +55,7 @@ Items loadItems(std::string filename) {
 	std::string version = rr.getString();
 	assert(version == "1.1");
 	rr.read();
-	uint16_t storeCode = rr.getWord();
+	rr.getWord(); //uint16_t storeCode
 	rr.read();
 	uint16_t nItems = rr.getWord();
 	items.reserve(nItems);
@@ -83,10 +83,10 @@ Items loadItems(std::string filename) {
 		item.type = rr.getWord();
 		item.resistanceFlags = rr.getDword();
 		for (size_t s = 0; s < 7; s++) {
-			item.stats[s] = rr.getWord();
+			item.statsRequired[s] = rr.getWord();
 		}
 		for (size_t s = 0; s < 7; s++) {
-			rr.get(item.statsmod[s]);
+			rr.get(item.statsMod[s]);
 		}
 		item.cursed = rr.getWord();
 		item.spellLvl = rr.getWord();
