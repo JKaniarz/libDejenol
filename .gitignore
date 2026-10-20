@@ -329,8 +329,8 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 
-
-
+# clangd files
+/.cache
 
 #XCodde
 .DS_Store
